@@ -93,9 +93,10 @@
                                 <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                             </a>
                             <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="#!">Buying</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Selling</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Transfer Stok</a></li>
+                        </li>
+                                <li class="pc-item"><a class="pc-link" href="/cms/buying">Buying</a></li>
+                                <li class="pc-item"><a class="pc-link" href="/cms/selling">Selling</a></li>
+                                <li class="pc-item"><a class="pc-link" href="">Transfer Stok</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">View Hapus Transaksi</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Rekap Buying</a></li>
