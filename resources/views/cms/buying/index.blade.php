@@ -16,7 +16,7 @@
                 </div>
             </div>
             <!-- [ breadcrumb ] end -->
-    <div class="buying-form p-3 rounded-full card h-100 bg-red-500" >
+    <div class="buying-form p-3 rounded-full card h-100" >
         <div class="row mb-3">
             <div class="col">
                 <ul class="nav nav-tabs mb-3">

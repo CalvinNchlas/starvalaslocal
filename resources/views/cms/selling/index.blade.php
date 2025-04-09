@@ -42,7 +42,7 @@
         <div class="form-section">
             <div class="row">
                 <div class="col-md-6">
-                    <!-- Factur and Cabang -->
+                <!-- Factur and Cabang -->
                  <div style="display: flex">
                     <div class="mb-3">
                         <label class="form-label">No. Faktur*</label>
