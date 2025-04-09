@@ -86,6 +86,7 @@
                             </ul>
                         </li>
 
+                        <!-- MODULE MC -->
                         <li class="pc-item pc-hasmenu">
                             <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="fa fa-money-bill"></i></span>
@@ -114,7 +115,8 @@
                                 </li>
                             </ul>
                         </li>
-
+                        
+                        <!-- MODULE KEUANGAN -->
                         <li class="pc-item pc-hasmenu">
                             <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="fa fa-university"></i></span>
@@ -137,6 +139,7 @@
                             </ul>
                         </li>
 
+                        <!-- MODULE AKUNTING -->
                         <li class="pc-item pc-hasmenu">
                             <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="fa fa-book"></i></span>
@@ -163,6 +166,7 @@
                             </ul>
                         </li>
 
+                        <!-- MODULE BI - PPATK -->
                         <li class="pc-item pc-hasmenu">
                             <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="fa fa-file"></i></span>
@@ -187,6 +191,7 @@
                             </ul>
                         </li>
 
+                        <!-- MODULE UTILITI -->
                         <li class="pc-item pc-hasmenu">
                             <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="fa fa-database"></i></span>
@@ -206,6 +211,7 @@
                             </ul>
                         </li>
 
+                        <!-- MODULE SALDO AWAL -->
                         <li class="pc-item pc-hasmenu">
                             <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="fa fa-money-bill"></i></span>
