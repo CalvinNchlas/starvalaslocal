@@ -14,6 +14,8 @@ use App\Http\Controllers\RecapTransferController;
 use App\Http\Controllers\ReportStockFirstController;
 use App\Http\Controllers\ReportStockLastController;
 use App\Http\Controllers\CardStockController;
+use App\Http\Controllers\MutationStockController;
+use App\Http\Controllers\ReportLabaLossController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,6 +42,8 @@ Route::resources([
     'reportstockfirst' => ReportStockFirstController::class,
     'reportstocklast' => ReportStockLastController::class,
     'cardstock' => CardStockController::class,
+    'mutationstock' => MutationStockController::class,
+    'reportlabaloss' => ReportLabaLossController::class,
     // Finish MODULE MC
 ]);
 
