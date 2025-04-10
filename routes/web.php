@@ -3,8 +3,8 @@
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\BuyingController;
 use App\Http\Controllers\SellingController;
-use App\Http\Controllers\TransferStokController;
-use App\Http\Controllers\ViewHapusController;
+use App\Http\Controllers\TransferController;
+use App\Http\Controllers\DeleteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,8 +20,8 @@ Route::resources([
     // MODULE MC
     'buying' => BuyingController::class,
     'selling' => SellingController::class,
-    'transfer' => TransferStokController::class,
-    'viewhapus' => ViewHapusController::class
+    'transfer' => TransferController::class,
+    'delete' => DeleteController::class
 ]);
 
 Route::post('logout', function () {
