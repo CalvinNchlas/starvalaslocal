@@ -101,7 +101,7 @@
                                 <li class="pc-item"><a class="pc-link" href="{{ route('recaptransfer.index') }}">Rekap Transfer Stock</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('reportstockfirst.index') }}">Laporan Stok Awal</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('reportstocklast.index') }}">Laporan Stok Akhir</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Kartu Stok</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('cardstock.index') }}">Kartu Stok</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Mutasi Stok</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Laba / Rugi</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Rekap Laba / Rugi</a>
