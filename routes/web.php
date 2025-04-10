@@ -5,6 +5,7 @@ use App\Http\Controllers\BuyingController;
 use App\Http\Controllers\SellingController;
 use App\Http\Controllers\TransferController;
 use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\ReportBuyingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,7 +22,8 @@ Route::resources([
     'buying' => BuyingController::class,
     'selling' => SellingController::class,
     'transfer' => TransferController::class,
-    'delete' => DeleteController::class
+    'delete' => DeleteController::class,
+    'reportbuying' => ReportBuyingController::class
 ]);
 
 Route::post('logout', function () {
