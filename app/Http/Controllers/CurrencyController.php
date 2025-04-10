@@ -20,7 +20,7 @@ class CurrencyController extends Controller
      */
     public function create()
     {
-        //
+        return view('cms.currency.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class CurrencyController extends Controller
      */
     public function show(Currency $currency)
     {
-        //
+        return view('cms.currency.show', compact('currency'));
     }
 
     /**
@@ -44,7 +44,7 @@ class CurrencyController extends Controller
      */
     public function edit(Currency $currency)
     {
-        //
+        return view('cms.currency.edit', compact('currency'));
     }
 
     /**
@@ -60,6 +60,60 @@ class CurrencyController extends Controller
      */
     public function destroy(Currency $currency)
     {
-        //
+        $currency->delete();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Currency deleted successfully.'
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource in datatable format.
+     */
+    public function datatable(Request $request)
+    {
+        $query = Currency::select([
+            'id',
+            'flag',
+            'currency',
+            'name',
+            'denomination',
+            'buy_rate',
+            'sell_rate',
+            'mid_rate',
+            'max_addition',
+            'max_reduction'
+        ]);
+
+        return datatables()
+            ->of($query)
+            ->editColumn('buy_rate', function ($row) {
+                return number_format($row->buy_rate, 2, ',', '.');
+            })
+            ->editColumn('sell_rate', function ($row) {
+                return number_format($row->sell_rate, 2, ',', '.');
+            })
+            ->editColumn('mid_rate', function ($row) {
+                return number_format($row->mid_rate, 2, ',', '.');
+            })
+            ->editColumn('max_addition', function ($row) {
+                return number_format($row->max_addition, 2, ',', '.');
+            })
+            ->editColumn('max_reduction', function ($row) {
+                return number_format($row->max_reduction, 2, ',', '.');
+            })
+            ->addColumn('actions', function ($row) {
+                return view('cms.partials.datatables.actions', [
+                    'showRoute' => route('currency.show', $row->id),
+                    'editRoute' => route('currency.edit', $row->id),
+                    'deleteRoute' => route('currency.destroy', $row->id),
+                ])->render();
+            })
+            ->rawColumns(['actions', 'flag'])
+            ->editColumn('flag', function ($row) {
+                return '<img src="' . asset($row->flag) . '" alt="Flag" width="50" height="30">';
+            })
+            ->make(true);
     }
 }

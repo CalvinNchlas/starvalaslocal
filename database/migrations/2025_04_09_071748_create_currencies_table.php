@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('currency')->nullable();
             $table->string('name')->nullable();
             $table->string('denomination')->nullable();
-            $table->decimal('buy_rate', 15, 4)->nullable();
-            $table->decimal('sell_rate', 15, 4)->nullable();
-            $table->decimal('mid_rate', 15, 4)->nullable();
-            $table->decimal('max_addition', 15, 4)->nullable();
-            $table->decimal('max_reduction', 15, 4)->nullable();
+            $table->decimal('buy_rate', 15, 2)->nullable();
+            $table->decimal('sell_rate', 15, 2)->nullable();
+            $table->decimal('mid_rate', 15, 2)->nullable();
+            $table->decimal('max_addition', 15, 2)->nullable();
+            $table->decimal('max_reduction', 15, 2)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
