@@ -30,7 +30,7 @@
                      </div>
                      <div class="col-md-6">
                      <div class="mb-3">
-                        <label class="form-label">Tanggal Hapus Sampai dengan</label>
+                        <label class="form-label">Tanggal Hapus Sampai Dengan</label>
                         <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
                      </div>
                      </div>
