@@ -89,10 +89,10 @@
                             </a>
                             <ul class="pc-submenu">
                         </li>
-                                <li class="pc-item"><a class="pc-link" href="/cms/buying">Buying</a></li>
-                                <li class="pc-item"><a class="pc-link" href="/cms/selling">Selling</a></li>
-                                <li class="pc-item"><a class="pc-link" href="/cms/transfer">Transfer Stok</a></li>
-                                <li class="pc-item"><a class="pc-link" href="/cms/viewhapus">View Hapus Transaksi</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('buying.index') }}">Buying</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('selling.index') }}">Selling</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('transfer.index') }}">Transfer Stok</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('viewhapus.index') }}">View Hapus Transaksi</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Rekap Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Selling</a></li>
