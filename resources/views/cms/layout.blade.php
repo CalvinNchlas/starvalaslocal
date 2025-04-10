@@ -94,7 +94,7 @@
                                 <li class="pc-item"><a class="pc-link" href="{{ route('transfer.index') }}">Transfer Stok</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('delete.index') }}">View Hapus Transaksi</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('reportbuying.index') }}">Laporan Buying</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Rekap Buying</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('recapbuying.index') }}">Rekap Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Selling</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Rekap Selling</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Penjualan Gabungan</a>
