@@ -8,6 +8,7 @@ use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\ReportBuyingController;
 use App\Http\Controllers\RecapBuyingController;
 use App\Http\Controllers\ReportSellingController;
+use App\Http\Controllers\RecapSellingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -28,6 +29,7 @@ Route::resources([
     'reportbuying' => ReportBuyingController::class,
     'recapbuying' => RecapBuyingController::class,
     'reportselling' => ReportSellingController::class,
+    'recapselling' => RecapSellingController::class,
 ]);
 
 Route::post('logout', function () {
