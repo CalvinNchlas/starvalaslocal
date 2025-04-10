@@ -11,6 +11,8 @@ use App\Http\Controllers\ReportSellingController;
 use App\Http\Controllers\RecapSellingController;
 use App\Http\Controllers\ReportSaleController;
 use App\Http\Controllers\RecapTransferController;
+use App\Http\Controllers\ReportStockFirstController;
+use App\Http\Controllers\ReportStockLastController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,6 +36,8 @@ Route::resources([
     'recapselling' => RecapSellingController::class,
     'reportsale' => ReportSaleController::class,
     'recaptransfer' => RecapTransferController::class,
+    'reportstockfirst' => ReportStockFirstController::class,
+    'reportstocklast' => ReportStockLastController::class,
     // Finish MODULE MC
 ]);
 

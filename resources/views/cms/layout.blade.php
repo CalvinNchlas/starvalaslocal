@@ -99,8 +99,8 @@
                                 <li class="pc-item"><a class="pc-link" href="{{ route('recapselling.index') }}">Rekap Selling</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('reportsale.index') }}">Laporan Penjualan Gabungan</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('recaptransfer.index') }}">Rekap Transfer Stock</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Awal</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Akhir</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('reportstockfirst.index') }}">Laporan Stok Awal</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('reportstocklast.index') }}">Laporan Stok Akhir</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Kartu Stok</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Mutasi Stok</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Laba / Rugi</a></li>
