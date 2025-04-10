@@ -9,7 +9,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h3 class="m-b-10">Transfer</h3>
+                                <h3 class="m-b-10">Transfer Stok</h3>
                             </div>
                         </div>
                     </div>
