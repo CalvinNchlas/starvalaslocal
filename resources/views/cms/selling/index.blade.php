@@ -157,7 +157,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <!-- use dynamic images -->
-                                            <img src="{{ asset('assets/images/flags/us.png') }}" width="20">
+                                            <img src="{{ url('assets/images/usd.png') }}" width="20">
                                             <span class="ms-1">USD0</span>
                                         </div>
                                         <small>100 ( M / P OLD )</small>
