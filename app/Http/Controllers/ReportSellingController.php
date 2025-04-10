@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ReportBuyingController extends Controller
+class ReportSellingController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('cms.reportbuying.index');
+        return view('cms.reportselling.index');
     }
-}
+}    
