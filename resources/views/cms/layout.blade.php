@@ -89,15 +89,25 @@
                             </a>
                             <ul class="pc-submenu">
                         </li>
-                        <li class="pc-item"><a class="pc-link" href="/cms/buying">Buying</a></li>
-                        <li class="pc-item"><a class="pc-link" href="/cms/selling">Selling</a></li>
-                        <li class="pc-item"><a class="pc-link" href="">Transfer Stok</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">View Hapus Transaksi</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Buying</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Rekap Buying</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Selling</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Rekap Selling</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Penjualan Gabungan</a>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('buying.index') }}">Buying</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('selling.index') }}">Selling</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('transfer.index') }}">Transfer Stok</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('viewhapus.index') }}">View Hapus Transaksi</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Buying</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Rekap Buying</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Selling</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Rekap Selling</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Penjualan Gabungan</a>
+                                </li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Rekap Transfer Stock</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Awal</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Akhir</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Kartu Stok</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Mutasi Stok</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Laba / Rugi</a></li>
+                                <li class="pc-item"><a class="pc-link" href="#!">Laporan Rekap Laba / Rugi</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="pc-item"><a class="pc-link" href="#!">Rekap Transfer Stock</a></li>
                         <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Awal</a></li>

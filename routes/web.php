@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\CurrencyController;
+use App\Http\Controllers\BuyingController;
+use App\Http\Controllers\SellingController;
+use App\Http\Controllers\TransferStokController;
+use App\Http\Controllers\ViewHapusController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,16 +15,13 @@ Route::get('dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-// MODULE MC
-Route::get('cms/buying', function () {
-    return view('cms/buying/index');
-})->name('cms/buying');
-Route::get('cms/selling', function () {
-    return view('cms/selling/index');
-})->name('cms/selling');
-
 Route::resources([
-    'currency' => CurrencyController::class
+    'currency' => CurrencyController::class,
+    // MODULE MC
+    'buying' => BuyingController::class,
+    'selling' => SellingController::class,
+    'transfer' => TransferStokController::class,
+    'viewhapus' => ViewHapusController::class
 ]);
 
 Route::post('logout', function () {
