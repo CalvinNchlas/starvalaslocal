@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\BuyingController;
 use App\Http\Controllers\SellingController;
@@ -18,35 +19,36 @@ use App\Http\Controllers\MutationStockController;
 use App\Http\Controllers\ReportLabaLossController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('login');
-})->name('login');
+Route::middleware('guest')->group(function () {
+    Route::post('login', [AuthController::class, 'login'])->name('login');
+    Route::get('login', [AuthController::class, 'showLoginForm'])->name('login.form');
+});
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
-Route::resources([
-    'currency' => CurrencyController::class,
-    // Start MODULE MC
-    'buying' => BuyingController::class,
-    'selling' => SellingController::class,
-    'transfer' => TransferController::class,
-    'delete' => DeleteController::class,
-    'reportbuying' => ReportBuyingController::class,
-    'recapbuying' => RecapBuyingController::class,
-    'reportselling' => ReportSellingController::class,
-    'recapselling' => RecapSellingController::class,
-    'reportsale' => ReportSaleController::class,
-    'recaptransfer' => RecapTransferController::class,
-    'reportstockfirst' => ReportStockFirstController::class,
-    'reportstocklast' => ReportStockLastController::class,
-    'cardstock' => CardStockController::class,
-    'mutationstock' => MutationStockController::class,
-    'reportlabaloss' => ReportLabaLossController::class,
-    // Finish MODULE MC
-]);
+    Route::get('currency-datatable', [CurrencyController::class, 'datatable'])->name('currency.datatable');
 
-Route::post('logout', function () {
-    return redirect()->route('login');
-})->name('logout');
+    Route::resources([
+        'currency' => CurrencyController::class,
+        // Start MODULE MC
+        'buying' => BuyingController::class,
+        'selling' => SellingController::class,
+        'transfer' => TransferController::class,
+        'delete' => DeleteController::class,
+        'reportbuying' => ReportBuyingController::class,
+        'recapbuying' => RecapBuyingController::class,
+        'reportselling' => ReportSellingController::class,
+        'recapselling' => RecapSellingController::class,
+        'reportsale' => ReportSaleController::class,
+        'recaptransfer' => RecapTransferController::class,
+        'reportstockfirst' => ReportStockFirstController::class,
+        'reportstocklast' => ReportStockLastController::class,
+        'cardstock' => CardStockController::class,
+        'mutationstock' => MutationStockController::class,
+        'reportlabaloss' => ReportLabaLossController::class,
+        // Finish MODULE MC
+    ]);
+
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+});

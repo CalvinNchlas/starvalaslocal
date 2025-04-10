@@ -9,7 +9,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h5 class="m-b-10">Dashboard</h5>
+                                <h3 class="m-b-10">Dashboard</h3>
                             </div>
                         </div>
                     </div>
@@ -37,9 +37,8 @@
                                     <div class="avatar-md profile-user-img rounded-circle border" style="background-image: url({{ url('/assets/images/user/avatar-1.jpg') }}); background-size: cover; width: 100px; height: 100px;">
                                     </div>
                                 </div>
-                                <div>Nita</div>
-                                <div>nita.infra@beyondtech.co.id</div>
-                                <div>A02</div>
+                                <div>{{ Auth::user()->name }}</div>
+                                <div>{{ Auth::user()->email }}</div>
                             </div>
                         </div>
                     </div>
@@ -90,145 +89,38 @@
             <!-- [ Main Content ] start -->
             <div class="row">
                 <!-- [ sample-page ] start -->
-                <div class="col-md-8">
-                    <div class="card">
+                <div class="col-md-8 mb-4">
+                    <div class="card h-100">
                         <div class="card-header">
-                            <h5>
-                                <span id="clock"></span>
-                                <script type="text/javascript">
-                                    function showTime() {
-                                        var date = new Date();
-                                        var days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-                                        var months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober",
-                                            "November", "Desember"
-                                        ];
-                                        var day = days[date.getDay()];
-                                        var dayNum = date.getDate();
-                                        var month = months[date.getMonth()];
-                                        var year = date.getFullYear();
-                                        var h = date.getHours().toString().padStart(2, '0');
-                                        var m = date.getMinutes().toString().padStart(2, '0');
-                                        var s = date.getSeconds().toString().padStart(2, '0');
-
-                                        var formattedDate = day + " " + dayNum + " " + month + " " + year + " " + h + ":" + m + ":" + s;
-                                        document.getElementById("clock").innerText = formattedDate;
-                                        document.getElementById("clock").textContent = formattedDate;
-
-                                        setTimeout(showTime, 1000);
-                                    }
-                                    showTime();
-                                </script>
-                            </h5>
+                            <h4 class="d-inline"><span id="clock"></span></h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-hover table-bordered align-middle" id="Container">
-                                <thead class="table-info text-uppercase">
-                                    <tr>
-                                        <th style="width: 175px;" class="text-start">
-                                            Mata Uang
-                                            <i class="fa fa-heart float-end text-danger" id="heart_favorite"
-                                                onclick="favoriteModal()" style="cursor: pointer; margin-right: 5px;"></i>
-                                        </th>
-                                        <th style="width: 230px;" class="text-start">Denomination</th>
-                                        <th style="width: 83px;" class="text-end">Kurs Beli</th>
-                                        <th style="width: 86px;" class="text-end">Kurs Jual</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="USD" class="me-2" width="40" height="25">USD</td>
-                                        <td class="fw-bold">100 ( M / P / Q NEW )</td>
-                                        <td class="text-end fw-bold text-danger">16,840.00</td>
-                                        <td class="text-end fw-bold text-primary">16,950.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="EUR" class="me-2" width="40" height="25">EUR</td>
-                                        <td class="fw-bold">500 - 200 - 100 - 50</td>
-                                        <td class="text-end fw-bold text-danger">18,427.00</td>
-                                        <td class="text-end fw-bold text-primary">18,577.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="SGD" class="me-2" width="40" height="25">SGD</td>
-                                        <td class="fw-bold">100 - 50</td>
-                                        <td class="text-end fw-bold text-danger">12,435.00</td>
-                                        <td class="text-end fw-bold text-primary">12,510.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="AUD" class="me-2" width="40" height="25">AUD</td>
-                                        <td class="fw-bold">100 - 50</td>
-                                        <td class="text-end fw-bold text-danger">10,210.00</td>
-                                        <td class="text-end fw-bold text-primary">10,370.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="MYR" class="me-2" width="40" height="25">MYR</td>
-                                        <td class="fw-bold">100 - 50</td>
-                                        <td class="text-end fw-bold text-danger">3,751.00</td>
-                                        <td class="text-end fw-bold text-primary">3,791.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="THB" class="me-2" width="40" height="25">THB</td>
-                                        <td class="fw-bold">1000 - 500</td>
-                                        <td class="text-end fw-bold text-danger">485.00</td>
-                                        <td class="text-end fw-bold text-primary">493.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="CNY" class="me-2" width="40" height="25">CNY</td>
-                                        <td class="fw-bold">100</td>
-                                        <td class="text-end fw-bold text-danger">2,303.00</td>
-                                        <td class="text-end fw-bold text-primary">2,323.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="SAR" class="me-2" width="40" height="25">SAR</td>
-                                        <td class="fw-bold">500 - 200</td>
-                                        <td class="text-end fw-bold text-danger">4,460.00</td>
-                                        <td class="text-end fw-bold text-primary">4,530.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="JPY" class="me-2" width="40" height="25">JPY</td>
-                                        <td class="fw-bold">10.000 - 5000</td>
-                                        <td class="text-end fw-bold text-danger">113.50</td>
-                                        <td class="text-end fw-bold text-primary">115.85</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="KRW" class="me-2" width="40" height="25">KRW</td>
-                                        <td class="fw-bold">10.000 - 50.000</td>
-                                        <td class="text-end fw-bold text-danger">11.00</td>
-                                        <td class="text-end fw-bold text-primary">12.50</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-start fw-bold"><img src="{{ url('assets/images/usd.png') }}"
-                                                alt="TWD" class="me-2" width="40" height="25">TWD</td>
-                                        <td class="fw-bold">1000 - 500</td>
-                                        <td class="text-end fw-bold text-danger">506.00</td>
-                                        <td class="text-end fw-bold text-primary">515.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="row">
+                                <table class="table display responsive nowrap" id="datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>Flag</th>
+                                            <th>Currency</th>
+                                            <th>Denomination</th>
+                                            <th>Buy Rate</th>
+                                            <th>Sell Rate</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
                         <div class="card-header">
                             <h5>KALKULATOR KURS</h5>
                         </div>
                         <div class="card-body">
                             <div class="container text-center">
                                 <div class="mt-1">
-                                    <button class="btn btn-primary me-2" onclick="setting_kurs('beli')"
-                                        id="button_beli_kurs">BELI</button>
-                                    <button class="btn btn-outline-primary ms-2" onclick="setting_kurs('jual')"
-                                        id="button_jual_kurs">JUAL</button>
+                                    <button class="btn btn-primary me-2" onclick="setting_kurs('beli')" id="button_beli_kurs">BELI</button>
+                                    <button class="btn btn-outline-primary ms-2" onclick="setting_kurs('jual')" id="button_jual_kurs">JUAL</button>
                                 </div>
 
                                 <input type="hidden" name="type_kurs" id="type_kurs" value="beli">
@@ -317,22 +209,13 @@
                                             </div>
 
                                             <div class="col-md-6">
-                                                <label for="currency_awal"
-                                                    class="form-label fw-bold text-start d-block">Currency</label>
-                                                <input type="text" name="currency_awal" id="currency_awal"
-                                                    class="form-control form-control-lg fw-bold"
-                                                    onkeyup="count_kurs(); formatKeyup(this)" onkeypress="count_kurs()"
-                                                    onkeydown="count_kurs()" autocomplete="off">
+                                                <label for="currency_awal" class="form-label fw-bold text-start d-block">Currency</label>
+                                                <input type="text" name="currency_awal" id="currency_awal" class="form-control form-control-lg fw-bold" onkeyup="count_kurs(); formatKeyup(this)" onkeypress="count_kurs()" onkeydown="count_kurs()" autocomplete="off">
                                             </div>
 
                                             <div class="col-12 mt-2">
-                                                <label for="jumlah_awal"
-                                                    class="form-label fw-bold text-start d-block">Jumlah</label>
-                                                <input type="text" name="jumlah_awal" id="jumlah_awal"
-                                                    class="form-control form-control-lg fw-bold"
-                                                    onkeyup="count_kurs(); formatKeyup(this)"
-                                                    onkeypress="return isNumberAlphaKey(event)" onkeydown="count_kurs()"
-                                                    autocomplete="off" placeholder="Masukkan Nominal">
+                                                <label for="jumlah_awal" class="form-label fw-bold text-start d-block">Jumlah</label>
+                                                <input type="text" name="jumlah_awal" id="jumlah_awal" class="form-control form-control-lg fw-bold" onkeyup="count_kurs(); formatKeyup(this)" onkeypress="return isNumberAlphaKey(event)" onkeydown="count_kurs()" autocomplete="off" placeholder="Masukkan Nominal">
                                             </div>
                                         </div>
 
@@ -417,24 +300,17 @@
                                             </div>
 
                                             <div class="col-md-6">
-                                                <label for="currency_akhir"
-                                                    class="form-label fw-bold text-start d-block">Currency</label>
-                                                <input type="text" name="currency_akhir" id="currency_akhir"
-                                                    class="form-control form-control-lg fw-bold"
-                                                    onkeyup="count_kurs(); formatKeyup(this)"
-                                                    onkeypress="count_kurs(); return isNumberAlphaKey(event)"
-                                                    onkeydown="count_kurs()" autocomplete="off">
+                                                <label for="currency_akhir" class="form-label fw-bold text-start d-block">Currency</label>
+                                                <input type="text" name="currency_akhir" id="currency_akhir" class="form-control form-control-lg fw-bold" onkeyup="count_kurs(); formatKeyup(this)" onkeypress="count_kurs(); return isNumberAlphaKey(event)" onkeydown="count_kurs()" autocomplete="off">
                                             </div>
 
                                             <div class="col-12 text-center">
                                                 <label class="form-label d-block">&nbsp;</label>
-                                                <div class="form-control form-control-lg border-0 fw-bold fs-4 text-danger"
-                                                    id="hasil_hitung"></div>
+                                                <div class="form-control form-control-lg border-0 fw-bold fs-4 text-danger" id="hasil_hitung"></div>
                                             </div>
                                         </div>
 
-                                        <button class="btn btn-danger w-100 mt-4 fw-bold"
-                                            onclick="reset_calculator()">Reset</button>
+                                        <button class="btn btn-danger w-100 mt-4 fw-bold" onclick="reset_calculator()">Reset</button>
                                     </div>
                                 </div>
                             </div>
@@ -448,3 +324,48 @@
         </div>
     </div>
 @endsection
+
+
+@push('scripts')
+    <script>
+        $(function() {
+            $('#datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                responsive: true,
+                ajax: '{{ route('currency.datatable') }}',
+                columns: [
+                    { data: 'flag', name: 'flag', orderable: false, searchable: false },
+                    { data: 'currency', name: 'currency' },
+                    { data: 'denomination', name: 'denomination' },
+                    { data: 'buy_rate', name: 'buy_rate' },
+                    { data: 'sell_rate', name: 'sell_rate' },
+                ],
+                order: [
+                    [1, 'asc']
+                ]
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function showTime() {
+            var date = new Date();
+            var days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            var months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+            var day = days[date.getDay()];
+            var dayNum = date.getDate();
+            var month = months[date.getMonth()];
+            var year = date.getFullYear();
+            var h = date.getHours().toString().padStart(2, '0');
+            var m = date.getMinutes().toString().padStart(2, '0');
+            var s = date.getSeconds().toString().padStart(2, '0');
+
+            var formattedDate = day + ", " + dayNum + " " + month + " " + year + " - " + h + ":" + m + ":" + s;
+            document.getElementById("clock").innerText = formattedDate;
+            document.getElementById("clock").textContent = formattedDate;
+
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+    </script>
+@endpush
