@@ -9,6 +9,7 @@ use App\Http\Controllers\ReportBuyingController;
 use App\Http\Controllers\RecapBuyingController;
 use App\Http\Controllers\ReportSellingController;
 use App\Http\Controllers\RecapSellingController;
+use App\Http\Controllers\ReportSaleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::resources([
     'recapbuying' => RecapBuyingController::class,
     'reportselling' => ReportSellingController::class,
     'recapselling' => RecapSellingController::class,
+    'reportsale' => ReportSaleController::class,
 ]);
 
 Route::post('logout', function () {
