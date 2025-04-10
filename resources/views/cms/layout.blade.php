@@ -97,8 +97,8 @@
                         </li>
                                 <li class="pc-item"><a class="pc-link" href="/cms/buying">Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="/cms/selling">Selling</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Transfer Stok</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">View Hapus Transaksi</a></li>
+                                <li class="pc-item"><a class="pc-link" href="/cms/transfer">Transfer Stok</a></li>
+                                <li class="pc-item"><a class="pc-link" href="/cms/viewhapus">View Hapus Transaksi</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Rekap Buying</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Selling</a></li>

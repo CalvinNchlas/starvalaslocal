@@ -17,3 +17,9 @@ Route::get('cms/buying', function () {
 Route::get('cms/selling', function () {
     return view('cms/selling/index');
 })->name('cms/selling');
+Route::get('cms/transfer', function () {
+    return view('cms/transfer/index');
+})->name('cms/transfer');
+Route::get('cms/viewhapus', function () {
+    return view('cms/viewhapus/index');
+})->name('cms/viewhapus');

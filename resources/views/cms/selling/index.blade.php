@@ -42,30 +42,40 @@
         <div class="form-section">
             <div class="row">
                 <div class="col-md-6">
-                <!-- Factur and Cabang -->
-                 <div style="display: flex">
+                    <!-- Factur and Cabang -->
+                 <div class="row">
+                  <div class="col-md-6">
                     <div class="mb-3">
                         <label class="form-label">No. Faktur*</label>
                         <input type="text" class="form-control" value="SI-202504-000019"  style="cursor: not-allowed;"  readonly>
                     </div>
-                    <div class="mb-3" style="margin-left: 20px">
-                        <label class="form-label">Cabang</label>
-                        <input type="text" class="form-control" value="PT. START VALAS INDONESIA"   style="cursor: not-allowed;"  readonly>
                     </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Cabang</label>
+                        <input type="text" class="form-control" value="PT. START VALAS INDONESIA"  style="cursor: not-allowed;"  readonly>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Date and Time -->
-                 <div style="display: flex">
-                    <div class="mb-3" >
+                 <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
                         <label class="form-label">Tanggal*</label>
                         <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
                     </div>
-                    <div class="mb-3" style="margin-left: 20px">
+                    </div>
+                  <div class="col-md-4">
+                    <div class="mb-3">
                         <label class="form-label">Jam*</label>
                         <input type="time" class="form-control" value="{{ date('d-m-Y') }}">
                     </div>
-                    <div class="mb-3" style="margin-left: 20px; margin-top:29px">
+                    </div>
+                  <div class="col-md-2">
+                    <div class="mb-3" style="margin-top:29px">
                         <input type="checkbox"  id="coding" name="interest" value="coding" checked/>
+                    </div>
                     </div>
                  </div>
 
@@ -103,13 +113,13 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Nilai</label>
-                                <input type="text" class="form-control" style="cursor: not-allowed;" readonly>
+                                <input type="text" class="form-control"  style="cursor: not-allowed;" readonly>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Jumlah</label>
-                                <input type="text" class="form-control" style="cursor: not-allowed;" readonly>
+                                <input type="text" class="form-control"  style="cursor: not-allowed;" readonly>
                             </div>
                         </div>
                     </div>
