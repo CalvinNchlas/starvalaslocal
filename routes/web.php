@@ -10,6 +10,7 @@ use App\Http\Controllers\RecapBuyingController;
 use App\Http\Controllers\ReportSellingController;
 use App\Http\Controllers\RecapSellingController;
 use App\Http\Controllers\ReportSaleController;
+use App\Http\Controllers\RecapTransferController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,7 +23,7 @@ Route::get('dashboard', function () {
 
 Route::resources([
     'currency' => CurrencyController::class,
-    // MODULE MC
+    // Start MODULE MC
     'buying' => BuyingController::class,
     'selling' => SellingController::class,
     'transfer' => TransferController::class,
@@ -32,6 +33,8 @@ Route::resources([
     'reportselling' => ReportSellingController::class,
     'recapselling' => RecapSellingController::class,
     'reportsale' => ReportSaleController::class,
+    'recaptransfer' => RecapTransferController::class,
+    // Finish MODULE MC
 ]);
 
 Route::post('logout', function () {

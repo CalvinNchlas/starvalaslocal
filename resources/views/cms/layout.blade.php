@@ -98,7 +98,7 @@
                                 <li class="pc-item"><a class="pc-link" href="{{ route('reportselling.index') }}">Laporan Selling</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('recapselling.index') }}">Rekap Selling</a></li>
                                 <li class="pc-item"><a class="pc-link" href="{{ route('reportsale.index') }}">Laporan Penjualan Gabungan</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Rekap Transfer Stock</a></li>
+                                <li class="pc-item"><a class="pc-link" href="{{ route('recaptransfer.index') }}">Rekap Transfer Stock</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Awal</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Akhir</a></li>
                                 <li class="pc-item"><a class="pc-link" href="#!">Kartu Stok</a></li>
