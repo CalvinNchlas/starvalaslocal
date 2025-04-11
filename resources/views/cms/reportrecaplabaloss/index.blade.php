@@ -9,14 +9,14 @@
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h3 class="m-b-10">Mutasi Stok</h3>
+                                <h3 class="m-b-10">Laporan Rekap Laba / Rugi</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- [ breadcrumb ] end -->
-    <div class="buying-form p-3 rounded-full card h-100">
+    <div class="buying-form p-3 rounded-full card h-100" >
         <div class="form-section">
             <div>
                 <div class="col-md-12">

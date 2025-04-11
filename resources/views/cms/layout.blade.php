@@ -111,14 +111,7 @@
                         <li class="pc-item"><a class="pc-link" href="{{ route('cardstock.index') }}">Kartu Stok</a></li>
                         <li class="pc-item"><a class="pc-link" href="{{ route('mutationstock.index') }}">Mutasi Stok</a></li>
                         <li class="pc-item"><a class="pc-link" href="{{ route('reportlabaloss.index') }}">Laporan Laba / Rugi</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Rekap Laba / Rugi</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Rekap Transfer Stock</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Awal</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Stok Akhir</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Kartu Stok</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Mutasi Stok</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Laba / Rugi</a></li>
-                        <li class="pc-item"><a class="pc-link" href="#!">Laporan Rekap Laba / Rugi</a></li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('reportrecaplabaloss.index') }}">Laporan Rekap Laba / Rugi</a></li>
                     </ul>
                     </li>
 

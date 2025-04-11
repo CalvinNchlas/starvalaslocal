@@ -17,6 +17,7 @@ use App\Http\Controllers\ReportStockLastController;
 use App\Http\Controllers\CardStockController;
 use App\Http\Controllers\MutationStockController;
 use App\Http\Controllers\ReportLabaLossController;
+use App\Http\Controllers\ReportRecapLabaLossController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -48,6 +49,7 @@ Route::middleware('auth')->group(function () {
         'cardstock' => CardStockController::class,
         'mutationstock' => MutationStockController::class,
         'reportlabaloss' => ReportLabaLossController::class,
+        'reportrecaplabaloss' => ReportRecapLabaLossController::class,
         // Finish MODULE MC
     ]);
 
