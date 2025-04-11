@@ -11,21 +11,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="{{ url('assets/images/favicon.svg') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" type="image/x-icon">
 
     <!-- [Google Font] Family -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
     <!-- [Tabler Icons] https://tablericons.com -->
-    <link rel="stylesheet" href="{{ url('assets/fonts/tabler-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/tabler-icons.min.css') }}">
     <!-- [Feather Icons] https://feathericons.com -->
-    <link rel="stylesheet" href="{{ url('assets/fonts/feather.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/feather.css') }}">
     <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
-    <link rel="stylesheet" href="{{ url('assets/fonts/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome.css') }}">
     <!-- [Material Icons] https://fonts.google.com/icons -->
-    <link rel="stylesheet" href="{{ url('assets/fonts/material.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/material.css') }}">
     <!-- [Template CSS Files] -->
-    <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" id="main-style-link">
-    <link rel="stylesheet" href="{{ url('assets/css/style-preset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" id="main-style-link">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-preset.css') }}">
 
     <!-- [DataTables CSS] -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css">
@@ -54,7 +54,7 @@
                 <div class="m-header">
                     <a href="{{ route('dashboard') }}" class="b-brand text-primary">
                         <!-- ========   Change your logo from here   ============ -->
-                        <img src="{{ url('assets/images/logo-icon.png') }}" class="img-fluid logo-lg" alt="logo">
+                        <img src="{{ asset('assets/images/logo-icon.png') }}" class="img-fluid logo-lg" alt="logo">
                     </a>
                 </div>
                 <div class="navbar-content">
@@ -273,12 +273,12 @@
     <!-- [ Main Content ] end -->
 
     <!-- Required Js -->
-    <script src="{{ url('assets/js/plugins/popper.min.js') }}"></script>
-    <script src="{{ url('assets/js/plugins/simplebar.min.js') }}"></script>
-    <script src="{{ url('assets/js/plugins/bootstrap.min.js') }}"></script>
-    <script src="{{ url('assets/js/fonts/custom-font.js') }}"></script>
-    <script src="{{ url('assets/js/pcoded.js') }}"></script>
-    <script src="{{ url('assets/js/plugins/feather.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/fonts/custom-font.js') }}"></script>
+    <script src="{{ asset('assets/js/pcoded.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/feather.min.js') }}"></script>
 
     <!-- [ Sweet Alert ] -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

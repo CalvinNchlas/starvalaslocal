@@ -5,7 +5,7 @@
         <div class="auth-wrapper v3">
             <div class="auth-form">
                 <div class="auth-header">
-                    <a href="#"><img src="../assets/images/logo-icon.png" alt="img" height="60"></a>
+                    <img src="{{ asset('assets/images/logo-icon.png') }}" alt="img" height="60">
                 </div>
                 <div class="card my-5">
                     <div class="card-body">
