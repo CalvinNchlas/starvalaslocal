@@ -36,7 +36,7 @@
                         <!-- Slider -->
                         <div class="col text-end">
                         <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="client">
                              <span class="slider round"></span>
                         </label>
                         </div>
@@ -60,7 +60,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="cabang">
                              <span class="slider round"></span>
                            </label>
                           </div>
@@ -73,25 +73,32 @@
 
                     <!-- DATE -->
                     <div class="row">
-                     <div class="col-md-6">
+                     <div class="col-md-6 mb-3">
                      <div class="col-md-12 mb-1" style="display:flex;">
                           <div class="form-label" style="margin: 5px 70%  0px 0px;" class="form-label">Tanggal Dari</div>
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="todate" checked>
                              <span class="slider round"></span>
                            </label>
                           </div>
                        </div>
                        <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
                      </div>
-                     
+
                      <div class="col-md-6">
-                     <div class="mb-3">
-                        <label class="form-label">Tanggal Sampai Dengan</label>
-                        <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
-                     </div>
+                     <div class="col-md-12 mb-1" style="display:flex;">
+                          <div class="form-label" style="margin: 5px 70%  0px 0px;" class="form-label">Tanggal S/D</div>
+                           <!-- Slider -->
+                           <div class="col text-end">
+                           <label class="switch">
+                             <input type="checkbox" id="todate" checked>
+                             <span class="slider round"></span>
+                           </label>
+                          </div>
+                       </div>
+                       <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
                      </div>
                      
                     <div class="mb-3">
@@ -100,7 +107,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="currency">
                              <span class="slider round"></span>
                            </label>
                           </div>
@@ -116,7 +123,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="gudang">
                              <span class="slider round"></span>
                            </label>
                           </div>
@@ -132,7 +139,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="bi">
                              <span class="slider round"></span>
                            </label>
                           </div>
@@ -148,7 +155,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="terindentikasi">
                              <span class="slider round"></span>
                            </label>
                           </div>
@@ -164,7 +171,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="transaksi">
                              <span class="slider round"></span>
                            </label>
                           </div>
@@ -180,7 +187,7 @@
                            <!-- Slider -->
                            <div class="col text-end">
                            <label class="switch">
-                             <input type="checkbox" id="judul" checked>
+                             <input type="checkbox" id="otorisasi">
                              <span class="slider round"></span>
                            </label>
                           </div>
