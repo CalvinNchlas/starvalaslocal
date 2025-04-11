@@ -11,6 +11,16 @@ class AuthController extends Controller
     use AuthorizesRequests;
 
     /**
+     * Show the application login form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index()
+    {
+        return view('login');
+    }
+
+    /**
      * Show the login form.
      *
      * @return \Illuminate\View\View
