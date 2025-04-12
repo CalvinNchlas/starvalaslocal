@@ -70,7 +70,7 @@ class AuthController extends Controller
      */
     protected function attemptLogin(Request $request)
     {
-        return Auth::attempt(
+        return Auth::guard('admin')->attempt(
             $request->only('email', 'password'),
             $request->boolean('remember')
         );
