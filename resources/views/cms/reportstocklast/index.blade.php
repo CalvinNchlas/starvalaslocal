@@ -71,6 +71,39 @@
                         </select>
                     </div>
 
+                    <!-- DATE -->
+                    <div class="row">
+                     <div class="col-md-6 mb-3">
+                     <div class="col-md-12 mb-1" style="display:flex;">
+                          <div class="form-label" style="margin: 5px 70%  0px 0px;" class="form-label">Tanggal Dari</div>
+                       </div>
+                       <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
+                     </div>
+
+                     <div class="col-md-4">
+                     <div class="mb-3">
+                        <div class="form-label" class="form-label">Tampilkan Harga</div>
+                        <input type="checkbox" class="form-check-input" id="payment" checked>
+                        <label class="form-check-label" for="payment">Ya</label>
+                     </div>
+                     </div>
+
+                     <!-- PENJUALAN -->
+                     <div class="row">
+                     <div class="col-md-6 mb-3">
+                     <div class="col-md-12 mb-1" style="display:flex;">
+                          <div class="form-label" style="margin: 5px 70%  0px 0px;" class="form-label">Tanggal Penjualan</div>
+                       </div>
+                       <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
+                     </div>
+
+                     <div class="col-md-6">
+                     <div class="col-md-12 mb-1" style="display:flex;">
+                          <div class="form-label" style="margin: 5px 70%  0px 0px;" class="form-label">S/D</div>
+                       </div>
+                       <input type="date" class="form-control" value="{{ date('d-m-Y') }}">
+                     </div>
+
                    <!-- REKAP -->
                     <div class="row">
                       <div class="col-md-6 mb-3">
