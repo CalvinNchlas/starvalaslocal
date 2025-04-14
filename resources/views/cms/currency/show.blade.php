@@ -1,4 +1,4 @@
-@extends('cms.layout')
+@extends('layouts.app')
 
 @section('content')
     <div class="pc-container">
@@ -48,8 +48,8 @@
                                             </div>
 
                                             <div class="mb-3 col-md-4">
-                                                <label for="nama" class="form-label">Nama</label>
-                                                <input type="text" class="form-control" id="nama" placeholder="Nama" required>
+                                                <label for="name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="name" name="name" value="{{ $currency->name }}" placeholder="Name" required>
                                             </div>
                                         </div>
 

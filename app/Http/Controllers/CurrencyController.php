@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Currency;
 use Illuminate\Http\Request;
 
 class CurrencyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:currencies.viewAny')->only(['index', 'datatable', 'show']);
+        $this->middleware('can:currencies.create')->only(['create', 'store']);
+        $this->middleware('can:currencies.update')->only(['edit', 'update']);
+        $this->middleware('can:currencies.delete')->only(['destroy']);
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -104,7 +113,7 @@ class CurrencyController extends Controller
                 return number_format($row->max_reduction, 2, ',', '.');
             })
             ->addColumn('actions', function ($row) {
-                return view('cms.partials.datatables.actions', [
+                return view('partials.datatables.actions', [
                     'showRoute' => route('currency.show', $row->id),
                     'editRoute' => route('currency.edit', $row->id),
                     'deleteRoute' => route('currency.destroy', $row->id),

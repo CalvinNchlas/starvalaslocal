@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\User;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
@@ -36,7 +37,7 @@ class RoleAndPermissionSeeder extends Seeder
         $role = Role::firstOrCreate(['guard_name' => 'admin', 'name' => 'super-user']);
         $role->givePermissionTo(Permission::all());
 
-        $user = User::find(1);
+        $user = Admin::find(1);
         if ($user) {
             $user->assignRole($role);
         }

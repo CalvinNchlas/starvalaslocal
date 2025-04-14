@@ -20,9 +20,11 @@ class DatabaseSeeder extends Seeder
         Company::factory(3)->create();
         Currency::factory(50)->create();
 
-        Admin::factory()->create()->each(function ($user) {
-            $user->name = 'Admin';
-            $user->email = 'admin@yopmail.com';
+        $count = 0;
+        Admin::factory(3)->create()->each(function ($user) use (&$count) {
+            $count++;
+            $user->name = 'Admin ' . $count;
+            $user->email = 'admin' . $count . '@yopmail.com';
             $user->save();
         });
 
