@@ -1,4 +1,4 @@
-@extends('cms.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="pc-container">

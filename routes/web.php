@@ -26,7 +26,7 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [AuthController::class, 'showLoginForm'])->name('login.form');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth:admin')->group(function () {
     Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
     Route::get('currency-datatable', [CurrencyController::class, 'datatable'])->name('currency.datatable');

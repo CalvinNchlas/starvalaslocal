@@ -2,6 +2,12 @@
 
 Follow these steps to install Laravel and set up your database:
 
+## Prerequisites
+Ensure you have the following installed on your system:
+- PHP >= 8.3
+- Composer
+- A database server (e.g., MySQL, PostgreSQL, SQLite)
+
 ## 1. Configure Environment
 Copy the example environment file and update it with your database credentials:
 ```bash

@@ -17,7 +17,7 @@ class AuthController extends Controller
      */
     public function index()
     {
-        return view('login');
+        return redirect()->route('login.form');
     }
 
     /**
@@ -27,7 +27,7 @@ class AuthController extends Controller
      */
     public function showLoginForm()
     {
-        return view('login');
+        return view('layouts.auth');
     }
 
     /**
@@ -70,7 +70,7 @@ class AuthController extends Controller
      */
     protected function attemptLogin(Request $request)
     {
-        return Auth::attempt(
+        return Auth::guard('admin')->attempt(
             $request->only('email', 'password'),
             $request->boolean('remember')
         );
@@ -117,6 +117,6 @@ class AuthController extends Controller
      */
     public function dashboard()
     {
-        return view('dashboard');
+        return view('cms.dashboard');
     }
 }

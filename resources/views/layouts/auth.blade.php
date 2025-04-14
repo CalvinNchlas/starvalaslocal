@@ -1,4 +1,4 @@
-@extends('cms.layout')
+@extends('layouts.app')
 
 @section('content')
     <div class="auth-main">
@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label class="form-label">Email Address</label>
-                                <input type="email" name="email" class="form-control" placeholder="Email Address" value="admin@example.com" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email Address" value="{{ \App\Models\Admin::first()->email }}" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="form-label">Password</label>
