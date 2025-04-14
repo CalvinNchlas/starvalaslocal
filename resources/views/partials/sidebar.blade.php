@@ -3,7 +3,7 @@
         <div class="m-header">
             <a href="{{ route('dashboard') }}" class="b-brand text-primary">
                 <!-- ========   Change your logo from here   ============ -->
-                <img src="{{ asset('assets/images/logo-icon.png') }}" class="img-fluid logo-lg" alt="logo">
+                <img src="{{ asset('../assets/images/logo-icon.png') }}" class="img-fluid logo-lg" alt="logo">
             </a>
         </div>
         <div class="navbar-content">
